@@ -1,0 +1,83 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_Affiliate
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+
+/** @var Mageplaza\Affiliate\Block\Account\Withdraw\Transaction $block */
+$withdraws = $block->getWithdraws();
+?>
+<div class="box-account box-info box-affiliate box-affiliate-withdraw-transaction">
+    <div class="box-head">
+        <h2><?= /* @noEscape */ __('Withdraw History') ?></h2>
+    </div>
+    <table class="data-table" id="affiliate-withdraws-history">
+        <thead>
+        <tr>
+            <th class="col id">#</th>
+            <th class="col requested_at"><?= /* @noEscape */ __('Requested Date') ?></th>
+            <th class="col amount"><?= /* @noEscape */ __('Amount') ?></th>
+            <th class="col fee"><?= /* @noEscape */ __('Fee') ?></th>
+            <th class="col payment_method"><?= /* @noEscape */ __('Withdraw Method') ?></th>
+            <th class="col payment_method"><?= /* @noEscape */ __('Withdraw Description') ?></th>
+            <th class="col status"><?= /* @noEscape */ __('Status') ?></th>
+            <th class="col action"><?= /* @noEscape */ __('Action') ?></th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php if (count($withdraws)) : ?>
+            <?php foreach ($withdraws as $_withdraw) : ?>
+                <tr>
+                    <td class="col a-right first"><?= /* @noEscape */ $_withdraw->getId() ?></td>
+                    <td class="col">
+                        <span class="nobr"><?= /* @noEscape */ $block->formatDate($_withdraw->getCreatedAt(), \IntlDateFormatter::MEDIUM, true) ?></span>
+                    </td>
+                    <td class="col a-right">
+                        <span class="price"><?= /* @noEscape */ $block->formatPrice($_withdraw->getAmount()) ?></span>
+                    </td>
+                    <td class="col a-right">
+                        <span class="price"><?= /* @noEscape */ $block->formatPrice($_withdraw->getFee()) ?></span>
+                    </td>
+                    <td class="col"><?= /* @noEscape */ $_withdraw->getPaymentLabel() ?></td>
+                    <td class="col"><?= $block->escapeHtml($_withdraw->getWithdrawDescription()) ?></td>
+                    <td class="col"><em><?= /* @noEscape */ $_withdraw->getStatusLabel() ?></em></td>
+                    <td class="col">
+                        <a href="<?= $block->escapeUrl($block->getUrl('affiliate/account_withdraw/view', ['id' => $_withdraw->getId()])) ?>">
+                            <?= /* @noEscape */ __('View') ?>
+                        </a>
+                        <?php if ($_withdraw->canCancel()) : ?>
+                            |
+                            <a href="<?= $block->escapeUrl($block->getUrl('affiliate/account_withdraw/cancel', ['id' => $_withdraw->getId()])) ?>"
+                               onclick="return confirm('<?= /* @noEscape */ __('Are you sure you want to cancel this withdraw?') ?>')">
+                                <?= /* @noEscape */ __('Cancel') ?>
+                            </a>
+                        <?php endif; ?>
+                    </td>
+                </tr>
+            <?php endforeach ?>
+        <?php else : ?>
+            <tr>
+                <td colspan="7">
+                    <span><?= /* @noEscape */ __('No withdraw found!') ?></span>
+                </td>
+            </tr>
+        <?php endif; ?>
+        </tbody>
+    </table>
+    <?= /* @noEscape */ $block->getPagerHtml() ?>
+</div>

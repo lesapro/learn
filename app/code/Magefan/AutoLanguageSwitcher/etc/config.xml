@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mfautolanguageswitcher>
+            <general>
+                <mfmodule>AutoLanguageSwitcher</mfmodule>
+                <share_storeview>1</share_storeview>
+                <switcher_mode>0</switcher_mode>
+                <suggestion_popup_text>Would you like to switch to %1 language?</suggestion_popup_text>
+            </general>
+            <extension_restrictions>
+                <allowed_pages>2</allowed_pages>
+                <specific_pages>
+checkout/*
+onestepcheckout/*
+customer/*
+                </specific_pages>
+                <user_agent>
+bot
+facebook
+yahoo
+                </user_agent>
+                <ips/>
+            </extension_restrictions>
+        </mfautolanguageswitcher>
+    </default>
+</config>

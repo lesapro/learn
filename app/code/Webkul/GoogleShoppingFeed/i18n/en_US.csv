@@ -1,0 +1,122 @@
+"Save Mapping Data","Save Mapping Data"
+"Google Shopping Feed Fields","Google Shopping Feed Fields"
+"Google Shopping Feeds","Google Shopping Feeds"
+"Product Id (offer Id)","Product Id (offer Id)"
+"Unique identification of item","Unique identification of item"
+Title,Title
+"Name Of Product","Name Of Product"
+Description,Description
+"Product Description","Product Description"
+GTIN,GTIN
+"Product GTIN","Product GTIN"
+Brand,Brand
+Color,Color
+MPN,MPN
+"Shipping Weight","Shipping Weight"
+"Image Link","Image Link"
+Size,Size
+"Size System","Size System"
+"Size Type","Size Type"
+"Google Shopping Feed Information","Google Shopping Feed Information"
+"Google Shopping Feed Info","Google Shopping Feed Info"
+"Google Shopping Category Map","Google Shopping Category Map"
+"Store Category","Store Category"
+"Magento Store Category","Magento Store Category"
+"Google Feed Category","Google Feed Category"
+"Authenticate User","Authenticate User"
+"Map Google Shopping","Map Google Shopping"
+"Mapped record saved successfully.","Mapped record saved successfully."
+"Invalid request","Invalid request"
+"Category Map","Category Map"
+"Manage Category Map","Manage Category Map"
+"This reason no longer exists.","This reason no longer exists."
+"Edit Category Map","Edit Category Map"
+"New Category Map","New Category Map"
+------Select------,------Select------
+"Google Shopping Category Map Record","Google Shopping Category Map Record"
+"A total of %1 record(s) have been deleted.","A total of %1 record(s) have been deleted."
+"Category mapped successfully.","Category mapped successfully."
+"Category already mapped.","Category already mapped."
+"Invalid request.","Invalid request."
+"Total Product(s) Created.","Total Product(s) Created."
+"Finished Execution.","Finished Execution."
+"; Store Product ID :- %1","; Store Product ID :- %1"
+"Total ","Total "
+" Product(s) Created."," Product(s) Created."
+"Exported Products","Exported Products"
+"Product export to Google shopping feed","Product export to Google shopping feed"
+"Google merchant center account successfully authorized.","Google merchant center account successfully authorized."
+error_description,error_description
+"Google merchant center account did not authorize.","Google merchant center account did not authorize."
+Select,Select
+Adult,Adult
+Infant,Infant
+Kids,Kids
+Newborn,Newborn
+Toddler,Toddler
+-----Select-----,-----Select-----
+"Create New Attribute","Create New Attribute"
+"----- Select ------","----- Select ------"
+New,New
+Refurbished,Refurbished
+Used,Used
+Female,Female
+Male,Male
+Unisex,Unisex
+Global,Global
+"As Product","As Product"
+"URL key for specified store already exists.","URL key for specified store already exists."
+"View Product","View Product"
+"please select category","please select category"
+"Select Sub Category","Select Sub Category"
+"Starting Execution","Starting Execution"
+"Please don't close or refresh the window while importing product(s).","Please don't close or refresh the window while importing product(s)."
+"Total %1 product(s) to import.","Total %1 product(s) to import."
+"Importing ","Importing "
+" of %1"," of %1"
+"No product to import.","No product to import."
+"Finsihed Execution.","Finsihed Execution."
+Completed,Completed
+"Export to google shop","Export to google shop"
+Attention,Attention
+Webkul,Webkul
+"Google Shopping Feed","Google Shopping Feed"
+"General Settings","General Settings"
+"Oauth Consumer Key","Oauth Consumer Key"
+"Oauth Consumer Secret","Oauth Consumer Secret"
+"Google Merchant Id","Google Merchant Id"
+"Merchant id of account in which you want to export shopping feed.","Merchant id of account in which you want to export shopping feed."
+"Default Configurations","Default Configurations"
+"Default Category","Default Category"
+"Google's category of the item (see <a target=""_blank"" href=""https://support.google.com/merchants/answer/6324436""> Google product taxonomy</a>).","Google's category of the item (see <a target=""_blank"" href=""https://support.google.com/merchants/answer/6324436""> Google product taxonomy</a>)."
+"Weight Unit","Weight Unit"
+"Enter weight unit which you are using in your store. Product feed in Google shop with this unit.","Enter weight unit which you are using in your store. Product feed in Google shop with this unit."
+"Age Group","Age Group"
+"Target age group of the item on Google Shopping Feed.","Target age group of the item on Google Shopping Feed."
+"Product avilable for","Product avilable for"
+"Target gender of the item on Google Shopping Feed.","Target gender of the item on Google Shopping Feed."
+"Product Condition","Product Condition"
+"Condition or state of the item on Google Shopping Feed.","Condition or state of the item on Google Shopping Feed."
+"Tax Rate","Tax Rate"
+"Tax Rate percentage (%) of the item on Google Shopping Feed.","Tax Rate percentage (%) of the item on Google Shopping Feed."
+"Tax apply on ship","Tax apply on ship"
+"Map Category","Map Category"
+Delete,Delete
+"Do you want to delete selected product map record?","Do you want to delete selected product map record?"
+"Created At","Created At"
+"Map Id#","Map Id#"
+"Google Feed Id","Google Feed Id"
+"Magento Product Id","Magento Product Id"
+"Expired At","Expired At"
+"Export selected items on Google Feed?","Export selected items on Google Feed?"
+"Export items on Google Feed","Export items on Google Feed"
+"Tax Rate Apply On Ship","Tax Rate Apply On Ship"
+"Custom Product","Custom Product"
+"Map Attribute","Map Attribute"
+"Google Feed Products","Google Feed Products"
+"Configuration","Configuration"
+"Default Category","Default Category"
+"Back","Back"
+"Reset","Reset"
+"Google feed account not authenticated.","Google feed account not authenticated."
+"Select 'Yes' to apply tax on shipping.","Select 'Yes' to apply tax on shipping."

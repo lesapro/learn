@@ -1,0 +1,165 @@
+/**
+ *
+ *          ..::..
+ *     ..::::::::::::..
+ *   ::'''''':''::'''''::
+ *   ::..  ..:  :  ....::
+ *   ::::  :::  :  :   ::
+ *   ::::  :::  :  ''' ::
+ *   ::::..:::..::.....::
+ *     ''::::::::::::''
+ *          ''::''
+ *
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Creative Commons License.
+ * It is available through the world-wide-web at this URL:
+ * http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to servicedesk@tig.nl so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please contact servicedesk@tig.nl for more information.
+ *
+ * @copyright   Copyright (c) Total Internet Group B.V. https://tig.nl/copyright
+ * @license     http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ */
+
+/* =================================================================================================================== *
+*
+* SupportTab - Default styling
+*
+* =================================================================================================================== */
+
+#section { float: left; width: 100%; clear: both; }
+#supporttab {margin-left: -2rem;}
+#supporttab #section { border-bottom: 1px solid #cccccc; }
+#supporttab #section:last-child { border-bottom: none; }
+
+#supporttab p {
+    line-height: 2em;
+}
+
+#supporttab ol, ul {
+    margin-left: 20px;
+    position :relative;
+}
+
+#supporttab ul li {
+    line-height: 2em;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+/* SupportTab - Legend ============================================================================================== */
+
+#block {
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+    clear: both;
+}
+
+.block-legend h3 {
+    cursor: auto !important;
+}
+
+.block-legend {
+    padding: 10px;
+    float:left;
+    width:100%;
+}
+
+@media screen and (min-width: 1200px){
+    .block-legend {
+        float:left;
+        width: 50%;
+    }
+
+    .right {
+        width:44% !important;
+    }
+}
+
+.disabled span.text,
+.live span.text,
+.test span.text {
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+/* Identity - Left Menu ====================================================================== */
+
+.maxcdn-section .admin__page-nav-link {
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.maxcdn-section .admin__page-nav-link:after {
+    float:right;
+    width: 30px;
+    height: 30px;
+    margin-top:-5px;
+    margin-right: 3px;
+
+    background-image: url(../images/logo_tig.png) !important;
+    background-size: 25px !important;
+    background-repeat:no-repeat;
+    content: ' ';
+}
+
+/* Identity - Toolbar =============================================================================================== */
+
+.maxcdn-config-page .page-actions-inner {
+    text-indent: -999em;
+}
+
+.maxcdn-config-page .page-main-actions .page-actions .page-actions-inner:after {
+    background-image: url(../images/logo_tig.png) !important;
+    background-repeat: no-repeat;
+    content: ' ';
+    width: 50px;
+    float: left;
+    height: 30px;
+    margin-top: 8px;
+    background-size: auto 25px;
+}
+
+
+/* SupportTab - Support ============================================================================================= */
+
+.tig-maxcdn-supporttab ul {
+    float:left;
+    width:100%;
+    clear:both;
+    margin-bottom: 0;
+}
+
+.tig-maxcdn-supporttab li.first {
+    font-weight :600;
+    width: 300px;
+}
+.tig-maxcdn-supporttab li.last {
+    width: 200px;
+}
+
+.tig-maxcdn-supporttab li.first,
+.tig-maxcdn-supporttab li.last {
+    line-height: normal;
+    float:left;
+}
+
+.tig-maxcdn-supporttab .block_contact svg { height: 16px; position: absolute; top: 5px; }
+.tig-maxcdn-supporttab .block_contact span { margin-left:26px; }
+
+.tig-maxcdn-supporttab .documents a {
+    margin-right: 15px;
+}
+
+.tig-maxcdn-supporttab a.github svg {
+    height: 16px;
+    margin-right: 7px;
+}

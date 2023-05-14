@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * Please visit Magefan.com for license details (https://magefan.com/end-user-license-agreement).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\Http\Context">
+        <plugin name="magefan_autolanguageswitcher_magento_framework_app_http_contex"
+                type="Magefan\AutoLanguageSwitcher\Plugin\Framework\App\Http\ContexPlugin" sortOrder="20" />
+    </type>
+    <type name="Magento\Framework\App\RouterList">
+        <arguments>
+            <argument name="routerList" xsi:type="array">
+                <item name="mfautolanguageswitcher" xsi:type="array">
+                    <item name="class" xsi:type="string">Magefan\AutoLanguageSwitcher\Controller\Router</item>
+                    <item name="disable" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">60</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\UrlRewrite\Model\StoreSwitcher\RewriteUrl">
+        <plugin disabled="false" name="Magefan_AutoLanguageSwitcher_Plugin_UrlRewrite_Model_StoreSwitcher_RewriteUrl" sortOrder="10" type="Magefan\AutoLanguageSwitcher\Plugin\UrlRewrite\Model\StoreSwitcher\RewriteUrlPlugin"/>
+    </type>
+    <type name="Magento\Store\Model\Store">
+        <plugin disabled="false" name="Magefan_AutoLanguageSwitcher_Plugin_Magento_Store_Model_Store" sortOrder="10" type="Magefan\AutoLanguageSwitcher\Plugin\Store\Model\StorePlugin"/>
+    </type>
+</config>

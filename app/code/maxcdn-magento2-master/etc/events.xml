@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ *          ..::..
+ *     ..::::::::::::..
+ *   ::'''''':''::'''''::
+ *   ::..  ..:  :  ....::
+ *   ::::  :::  :  :   ::
+ *   ::::  :::  :  ''' ::
+ *   ::::..:::..::.....::
+ *     ''::::::::::::''
+ *          ''::''
+ *
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Creative Commons License.
+ * It is available through the world-wide-web at this URL:
+ * http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to servicedesk@tig.nl so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please contact servicedesk@tig.nl for more information.
+ *
+ * @copyright   Copyright (c) Total Internet Group B.V. https://tig.nl/copyright
+ * @license     http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Purge pull zone after cache is flushed. -->
+    <event name="adminhtml_cache_flush_all">
+        <observer name="maxcdn_purge_pullzone" instance="TIG\MaxCDN\Observer\PurgeAll"/>
+    </event>
+    <event name ="adminhtml_cache_flush_system">
+        <observer name="maxcdn_purge_pullzone" instance="TIG\MaxCDN\Observer\PurgeAll"/>
+    </event>
+    <!-- Purge pull zone after js/css cache is flushed. -->
+    <event name="clean_media_cache_after">
+        <observer name="maxcdn_purge_pullzone" instance="TIG\MaxCDN\Observer\PurgeAll"/>
+    </event>
+    <!-- Purge pull zone after media images cache is flushed. -->
+    <event name="clean_catalog_images_cache_after">
+        <observer name="maxcdn_purge_pullzone" instance="TIG\MaxCDN\Observer\PurgeAll"/>
+    </event>
+    <!-- Purge pull zone after product image is uploaded is flushed. -->
+    <event name="catalog_product_gallery_upload_image_after">
+        <observer name="maxcdn_purge_pullzone" instance="TIG\MaxCDN\Observer\PurgeAll"/>
+    </event>
+</config>

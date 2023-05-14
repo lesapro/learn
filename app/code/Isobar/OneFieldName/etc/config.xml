@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <one_field_name>
+            <configuration>
+                <is_show>0</is_show>
+                <merge_type>1</merge_type>
+            </configuration>
+        </one_field_name>
+        <Isobar_OneFieldName>
+            <guide>https://bluecom.atlassian.net/wiki/spaces/MG/pages/2653257796/One+fieldname</guide>
+        </Isobar_OneFieldName>
+    </default>
+</config>

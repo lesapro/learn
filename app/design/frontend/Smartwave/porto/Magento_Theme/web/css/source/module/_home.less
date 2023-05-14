@@ -1,0 +1,384 @@
+& when (@media-common =true) {
+
+    // Homepage style move code in cms page admin 
+    .columns .column.main {
+        padding-bottom: 0;
+    }
+
+    .home-banner-slider .container.first-banner>* {
+        padding-left: 8% !important;
+        padding-right: 40% !important;
+    }
+
+    @media (max-width: 991px) {
+        .home-banner-slider .container.first-banner>* {
+            padding-left: 0 !important;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .home-banner-slider .container.first-banner>* {
+            padding-right: 0 !important;
+        }
+    }
+
+    .coupon-sale-text {
+        transform: rotate(-2deg);
+        letter-spacing: -.01em;
+        position: relative;
+    }
+
+    .coupon-sale-text b {
+        display: inline-block;
+        font-size: 1.6em;
+        font-weight: 700;
+        padding: 5px 8px;
+        background-color: #ff7272;
+        color: #fff;
+    }
+
+    .coupon-sale-text sup {
+        font-size: 50%;
+        top: -.5em;
+    }
+
+    .coupon-sale-light-bg b {
+        background: #fff;
+        color: #222529;
+    }
+
+    .coupon-sale-text i {
+        font-style: normal;
+        position: absolute;
+        left: -2.25em;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        font-size: .65em;
+        opacity: .6;
+        letter-spacing: 0;
+    }
+
+    html .heading.heading-dark .heading-tag {
+        border-color: #222529;
+    }
+
+    .heading.heading-border.heading-border-xl .heading-tag:before,
+    .heading.heading-border.heading-border-xl .heading-tag:after {
+        border-top-width: 7px;
+        margin-top: -3px;
+    }
+
+    .heading.heading-border.heading-border-xl .heading-tag:before,
+    .heading.heading-border.heading-border-xl .heading-tag:after {
+        border-top-width: 7px;
+        margin-top: -3px;
+    }
+
+    .row-center .row {
+        justify-content: center;
+    }
+
+    .post-item .read-more {
+        display: none;
+    }
+
+    // Home freeshipping
+    .home-bar .porto-sicon-box {
+        justify-content: center;
+        padding: 1rem 0;
+        margin: 0;
+        border-right: 1px solid #de4b40;
+        margin-right: -2px;
+    }
+
+    // Brand logo
+    .home-brands {
+        h3 {
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0 0 30px 0;
+            position: relative;
+            color: #313131;
+            text-align: center;
+
+            strong {
+                font-family: Poppins, sans-serif;
+                font-size: 1.125rem;
+                letter-spacing: -.02em;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+                position: relative;
+                color: #313131;
+                z-index: 999;
+                padding: 0 10px;
+                background: white;
+            }
+
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                background: rgba(0, 0, 0, 0.08);
+                height: 1px;
+                width: 50%;
+                top: 17px;
+            }
+        }
+    }
+
+    .brand-products .block.widget.block-products-list.grid {
+        text-align: center;
+    }
+
+    .brand-content {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        max-width: 1440px;
+        margin: 20px auto 30px auto;
+        text-align: center;
+        flex-direction: unset !important;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            padding: 0 20px;
+        }
+
+
+        img {
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 768px) {
+                max-width: max-content !important;
+            }
+        }
+
+        figure {
+            display: none;
+        }
+
+        .col-lg-3 {
+            flex: 0 0 20%;
+            max-width: 20%;
+
+            @media screen and (max-width: 767px) {
+                flex: 0 0 33%;
+                max-width: 33%;
+            }
+        }
+
+        .gallery-btn {
+            width: 100%;
+            margin-top: 25px;
+            text-transform: capitalize;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            * {
+                border: 1px solid;
+                max-width: 150px;
+                width: 100%;
+                clear: both;
+                margin: 0 auto !important;
+                padding: 10px;
+                font-weight: 700;
+                color: black;
+                font-size: 1em;
+            }
+        }
+
+
+    }
+
+
+    // Brand products
+    .page-layout-1column .brand-products .block.widget .products-grid .product-item {
+        width: auto !important;
+        float: none !important;
+        margin-left: auto !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .brand-products {
+        overflow: hidden;
+        margin: 60px auto 50px auto;
+        max-width: 1200px;
+        width: 100%;
+
+        .products-grid.products-grid.grid {
+            width: 100%;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+
+                .owl-prev,
+                .owl-next {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .owl-nav {
+            text-align: center;
+            -webkit-tap-highlight-color: transparent;
+            top: 37%;
+            position: absolute;
+            margin-top: 0;
+            width: 100%;
+            flex: none;
+        }
+
+        .owl-nav [class*="owl-"] {
+            position: absolute;
+            width: 30px;
+            background: none !important;
+            color: #333;
+            font-size: 24px;
+            z-index: 9999;
+            width: 30px;
+            background: none !important;
+            color: #333;
+            font-size: 24px;
+            overflow: unset;
+            border: none;
+
+            span {
+                display: none;
+            }
+        }
+
+        .owl-prev {
+            opacity: 0;
+            left: 0;
+            padding: 0;
+            transform: translate(0, -50%);
+
+            &::before {
+                font-family: "porto-icons";
+                content: "\f80a";
+                position: relative;
+                left: -1px;
+            }
+        }
+
+        .owl-next {
+            opacity: 0;
+            right: 0;
+            padding: 0;
+            transform: translate(0, -50%);
+
+            &::before {
+                content: "\f809";
+                font-family: "porto-icons";
+                position: relative;
+                left: 1px;
+            }
+        }
+
+        .block-title {
+            margin: 0 10px 30px 10px !important;
+
+            strong {
+                font-size: 1.125rem;
+                letter-spacing: -.02em;
+                font-family: Poppins, sans-serif;
+                color: #313131;
+                z-index: 999;
+                padding: 0 10px;
+                background: white;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+                position: relative;
+            }
+
+            position: relative;
+
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                background: rgba(0, 0, 0, 0.08);
+                height: 1px;
+                width: 50%;
+                top: 8px;
+            }
+        }
+    }
+
+
+
+    .product-items.widget-product-grid {
+        display: unset;
+        font-size: unset !important;
+
+        .owl-item {
+            position: relative;
+            min-height: 1px;
+            float: left;
+            -webkit-backface-visibility: hidden;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        .product-item {
+            width: auto !important;
+            float: none !important;
+            margin-left: auto !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cms-index-index {
+        .brand-products {
+            margin: 20px auto 30px auto;
+        }
+
+        .home-brands {
+            margin-top: 20px
+        }
+
+        .brand-content {
+            padding: 0;
+
+            img {
+                margin-bottom: 30px;
+                max-width: 90% !important;
+            }
+        }
+
+        .porto-inner-container {
+            .container {
+                padding: 0
+            }
+        }
+    }
+
+}

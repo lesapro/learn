@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+ /**
+  * Webkul GoogleShoppingFeed acl xml
+  * @category  Webkul
+  * @package   Webkul_GoogleShoppingFeed
+  * @author    Webkul
+  * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+  * @license   https://store.webkul.com/license.html
+  */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Webkul_GoogleShoppingFeed::manager" title="Google Shopping Feed" sortOrder="10" >
+                    <resource id="Webkul_GoogleShoppingFeed::maped_attribute" title="Map Attribute" sortOrder="20" >
+                        <resource id="Webkul_GoogleShoppingFeed::attributemap_save" title="Save Map Record" sortOrder="10"/>
+                    </resource>
+                    <resource id="Webkul_GoogleShoppingFeed::maped_category" title="Map Category" sortOrder="30">
+                        <resource id="Webkul_GoogleShoppingFeed::maped_category_save" title="Save Map Record" sortOrder="10"/>
+                        <resource id="Webkul_GoogleShoppingFeed::cat_map_delete" title="Record Delete" sortOrder="20"/>
+                    </resource>
+                    <resource id="Webkul_GoogleShoppingFeed::exported_pro" title="Google Feed Products" sortOrder="40">
+                        <resource id="Webkul_GoogleShoppingFeed::feed_map_delete" title="Record Delete" sortOrder="20"/>
+                    </resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Webkul_GoogleShoppingFeed::config_googleshoppingfeed" title="Google Shopping Feed" sortOrder="50">
+                                <resource id="Webkul_GoogleShoppingFeed::user_authenticate" title="User Authentication" sortOrder="10"/>
+                                <resource id="Webkul_GoogleShoppingFeed::product_export" title="Product Export To Google Shop" sortOrder="20"/>
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

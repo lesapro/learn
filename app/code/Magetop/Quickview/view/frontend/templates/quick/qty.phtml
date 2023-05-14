@@ -1,0 +1,11 @@
+<?php 
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $product = $objectManager->get('Magento\Framework\Registry')->registry('current_product');//get current product
+    $StockState = $objectManager->get('\Magento\CatalogInventory\Api\StockStateInterface');
+    $qty    =   $StockState->getStockQty($product->getId(), $product->getStore()->getWebsiteId());
+?>
+
+<div class="stock-quantity">
+    <span><?= __("Quantity: ") ?></span>
+    <strong><?= $qty ?></strong>
+</div>

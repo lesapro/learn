@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="\Magento\Wishlist\Controller\Index\Add">
+	    <plugin name="sparsh_quick_view_wishlist" type="Sparsh\QuickView\Plugin\Wishlist"/>
+	</type>
+	<type name="\Magento\Catalog\Controller\Product\Compare\Add">
+	    <plugin name="sparsh_quick_view_compare" type="Sparsh\QuickView\Plugin\Compare"/>
+	</type>
+</config>

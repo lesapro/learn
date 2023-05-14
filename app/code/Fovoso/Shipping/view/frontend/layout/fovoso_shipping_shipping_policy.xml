@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 Porto. All rights reserved.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="shipping_policy_content" htmlTag="div" htmlId="fovoso_policy">
+                <block class="Fovoso\Shipping\Block\ShippingPolicy" name="fovoso_shipping_policy" template="Fovoso_Shipping::shipping_policy.phtml" />
+            </container>
+            <block name="fovoso_shipping_policy_text" class="Fovoso\Shipping\Block\ShippingPolicyText" template="Fovoso_Shipping::shipping_policy_text.phtml" />
+        </referenceContainer>
+    </body>
+</page>

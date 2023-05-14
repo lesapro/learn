@@ -1,0 +1,51 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_Affiliate
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+?>
+<?php
+/** @var Mageplaza\Affiliate\Block\Account\Setting $block */
+?>
+<form class="form form-edit-account form-affiliate form-affiliate-setting" id="affiliate-settings" method="post"
+      action="<?= $block->getUrl('*/*/settingpost') ?>">
+    <fieldset class="fieldset request">
+        <legend class="legend"><span><?= /* @escapeNotVerified */ __('Affiliate Subscriptions') ?></span></legend>
+        <br>
+        <div class="field choice">
+            <input type="checkbox" name="account[email_notification]" id="email-notification" value="1"
+                   title="<?= /* @escapeNotVerified */
+                   __('Email Notification') ?>"<?php if ($block->getEmailNotification()): ?> checked="checked"<?php endif; ?>
+                   class="checkbox"/>
+            <label class="label" for="email-notification">
+                <span><?= /* @escapeNotVerified */ __('Receive affiliate email.') ?></span>
+            </label>
+        </div>
+    </fieldset>
+
+    <?= $block->getChildHtml('affiliate.setting.extra') ?>
+
+    <div class="actions-toolbar affiliate-clear">
+        <div class="primary">
+            <button type="submit" class="action save primary"
+                    title="<?= /* @escapeNotVerified */ __('Save') ?>">
+                    <span><?= /* @escapeNotVerified */ __('Save') ?></span>
+            </button>
+        </div>
+    </div>
+</form>

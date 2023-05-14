@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\CustomerImportExport\Model\Import\Customer"
+                type="Isobar\OneFieldName\Override\Magento\CustomerImportExport\Model\Import\Customer"
+    />
+    <preference for="Magento\CustomerImportExport\Model\Import\Address"
+                type="Isobar\OneFieldName\Override\Magento\CustomerImportExport\Model\Import\Address"
+    />
+    <type name="Magento\Customer\Model\Metadata\Form">
+        <plugin name="Isobar_OneFieldName::custom_name_fields_sales_address"
+                type="Isobar\OneFieldName\Plugin\Magento\Customer\Model\Metadata\Form"
+                sortOrder="100"
+                disabled="false"
+        />
+    </type>
+    <type name="Magento\Eav\Model\Attribute\Data\Text">
+        <plugin name="Isobar_OneFieldName::adminhtml_remove_validate_lastname"
+                type="Isobar\OneFieldName\Plugin\Magento\Eav\Model\Attribute\Data\Text"
+                sortOrder="100"
+                disabled="false"
+        />
+    </type>
+</config>

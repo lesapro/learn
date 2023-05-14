@@ -1,0 +1,23 @@
+Legend
+
++ Features
+- Bugs
+-------------------------------- Version 4.0.1 --------------------------------------
+    + Product export on google merchant account according to store.
+-------------------------------- Version 4.0.0 --------------------------------------
+    + Compatible with magento 2.4.X .
+-------------------------------- Version 3.0.1 --------------------------------------
+    + Declarative schema applied.
+-------------------------------- Version 3.0.0 --------------------------------------
+    + Set account id in case of multiple accounts in merchant center.
+    + Products without identification number (MPM/GTIN) admin can set as custom product.
+-------------------------------- Version 2.1.0 --------------------------------------
+    + Compatible with magento 2.3.
+    + Individual products can export to google shopping feed.
+-------------------------------- Version 2.0.1 --------------------------------------
+    + Store Product and Google Product Feed Map record grid.
+-------------------------------- Version 2.0.0 --------------------------------------
+    + Store products add to Google Feed using content API.
+    + Google Feed Auto update on product save on store.
+    + Dynamic Attributes mapping.
+    + Map store category with Google shopping feed categories.

@@ -1,0 +1,31 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_Affiliate
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+?>
+<?php
+/** @var Mageplaza\Affiliate\Block\Account\Withdraw $block */
+?>
+<div class="field payment-method withdraw-payment-method-detail" id="withdraw-payment-method-offline">
+    <label for="withdraw-offline-address" class="label"><span><?= __('Address') ?></span></label>
+    <div class="control">
+        <textarea name="offline_address" id="withdraw-offline-address"
+                  class="withdraw-offline-address"><?= $block->getFormData('offline_address') ?></textarea>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <tn_standard>
+                <active>1</active>
+                <title>Standard Shipping</title>
+                <name>Standard Shipping</name>
+                <model>Fovoso\Shipping\Model\Standard</model>
+                <free_ship>59</free_ship>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                <sort_order>1</sort_order>
+            </tn_standard>
+            <tn_express>
+                <active>1</active>
+                <title>Express Shipping</title>
+                <name>Express Shipping</name>
+                <model>Fovoso\Shipping\Model\Express</model>
+                <free_ship>149</free_ship>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                <sort_order>2</sort_order>
+            </tn_express>
+        </carriers>
+    </default>
+</config>
