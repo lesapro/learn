@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="customer_address_columns">
+        <column name="firstname" sortOrder="20" class="Isobar\OneFieldName\Ui\Component\Listing\Address\Column\Firstname">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">First Name</label>
+            </settings>
+        </column>
+        <column name="lastname" sortOrder="40" class="Isobar\OneFieldName\Ui\Component\Listing\Address\Column\Lastname">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Last Name</label>
+            </settings>
+        </column>
+        <column name="street" sortOrder="80" class="Isobar\OneFieldName\Ui\Component\Listing\Address\Column\Street">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Street Address</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

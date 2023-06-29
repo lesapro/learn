@@ -1,0 +1,114 @@
+<?php
+/**
+ * @category   Webkul
+ * @package    Webkul_GoogleShoppingFeed
+ * @author     Webkul Software Private Limited
+ * @copyright  Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license    https://store.webkul.com/license.html
+ */
+?>
+<style type="text/css">
+    #row_googleshoppingfeed_general_settings_oauth2_access_token,
+    #row_googleshoppingfeed_general_settings_oauth2_refresh_token,
+    #row_googleshoppingfeed_general_settings_oauth2_access_token_expire_on,
+    #row_googleshoppingfeed_general_settings_update_authentication{
+        display:none;
+    }
+    .buttons-container{
+        margin-top: 20px;
+    }
+    .pp-buttons-container button {
+        display: inline-block;
+    }
+    .mark{display: inline-block;}
+    .mark::before{
+        font-family: 'Admin Icons';
+        font-size: 1.5rem;
+        position: relative;
+    }
+   .mark.expired:before {
+        color: #e22626;
+        content: '\e632  Expired';
+    }
+    .mark.notexpired:before {
+        color: #79a22e;
+        content: '\e62d Authorized';
+    }
+ </style>
+<?php $tockenStatus = $block->getAccessTocken() ? 'notexpired' : 'expired'; ?>
+<div class="pp-buttons-container">
+    <button id="<?= /* @noEscape */ $block->getId() ?>" onclick="return false;">
+        <span><span><span><?= /* @noEscape */ $block->escapeHtml($block->getButtonLabel()); ?></span></span></span>
+    </button>
+    <p class="mark <?= /* @noEscape */ $tockenStatus;?>"></p>
+</div>
+
+<div class="buttons-container">
+    <button id="add_products_to_google_shop" onclick="return false;">
+        <span><span><span><?= /* @noEscape */ $block->escapeHtml(__('Export to google shop')); ?></span></span></span>
+    </button>
+</div>
+<script>
+require([
+        "jquery",
+        "mage/mage",
+        "Magento_Ui/js/modal/alert"
+    ], function($, mage, alert){
+        var alerttext = '';
+        var AuthUrl = '<?= /* @noEscape */ $block->getAjaxCheckUrl() ?>';
+        var width = '700';
+        var height = '400';
+        var scroller = 1;
+        var popup = '';
+        var screenX = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft;
+        var screenY = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop;
+        var outerWidth = typeof window.outerWidth != 'undefined' ?
+                window.outerWidth : document.body.clientWidth;
+        var outerHeight = typeof window.outerHeight != 'undefined' ?
+                window.outerHeight : (document.body.clientHeight - 22);
+        var left = parseInt(screenX + ((outerWidth - width) / 2), 10);
+        var top = parseInt(screenY + ((outerHeight - height) / 2.5), 10);
+        var settings = (
+            'width=' + width +
+            ',height=' + height +
+            ',left=' + left +
+            ',top=' + top +
+            ',scrollbars=' + scroller
+        );
+        $("#<?= /* @noEscape */ $block->getId() ?>").on("click", function() {
+            var AuthUrl = '<?= /* @noEscape */ $block->getAjaxCheckUrl() ?>';
+            popup = window.open(AuthUrl, "Google Account Authorization", settings);
+            if (popup) {
+                var timer = setInterval(function () {
+                    if (popup.closed) {
+                        clearInterval(timer);
+                        $('#save').removeAttr('disabled');
+                        $('#save').click();
+                    }
+                }, 1000);
+            } else {
+                alert({
+                   title: 'Popup Notification',
+                   content: 'Please allow popup on your browser for authentication.',
+                   actions: {
+                       always: function (){}
+                   }
+               });
+            }
+        });
+
+        $("#add_products_to_google_shop").on("click", function() {
+            var url = '<?= /* @noEscape */ $block->getUrl('googleshoppingfeed/products/profiler')?>';
+            popup = window.open(url, "Google Account Authorization", settings);
+            if (!popup) {
+                alert({
+                   title: 'Popup Notification',
+                   content: 'Please allow popup on your browser for authentication.',
+                   actions: {
+                       always: function (){}
+                   }
+               });
+            }
+        });
+       });
+</script>

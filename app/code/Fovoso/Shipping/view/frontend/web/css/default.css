@@ -1,0 +1,18 @@
+.action.primary {
+    background: #222529 !important;
+    border-color: #222529 !important;
+    color: #fff !important;
+}
+.footer .footer-ribbon{
+    background-color:#222529 !important;
+}
+.footer .footer-ribbon:before{
+    border-right-color:#222529 !important;
+    border-left-color:#222529 !important;
+}
+html .porto-block-html-top .background-color-primary {
+    background-color: #222529 !important;
+}
+.page-header .navigation li.level0.active, .page-header .navigation li.level0:hover, .page-header.type23 .navigation .level0.active > .level-top, .page-header.type23 .navigation .level0.has-active > .level-top {
+    color: #222529 !important;
+}

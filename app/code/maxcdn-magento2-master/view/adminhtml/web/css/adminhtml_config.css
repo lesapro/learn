@@ -1,0 +1,68 @@
+/**
+ *
+ *          ..::..
+ *     ..::::::::::::..
+ *   ::'''''':''::'''''::
+ *   ::..  ..:  :  ....::
+ *   ::::  :::  :  :   ::
+ *   ::::  :::  :  ''' ::
+ *   ::::..:::..::.....::
+ *     ''::::::::::::''
+ *          ''::''
+ *
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Creative Commons License.
+ * It is available through the world-wide-web at this URL:
+ * http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to servicedesk@tig.nl so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this module to newer
+ * versions in the future. If you wish to customize this module for your
+ * needs please contact servicedesk@tig.nl for more information.
+ *
+ * @copyright   Copyright (c) Total Internet Group B.V. https://tig.nl/copyright
+ * @license     http://creativecommons.org/licenses/by-nc-nd/3.0/nl/deed.en_US
+ */
+
+/* =================================================================================================================== *
+*
+* TIG MaxCDN Magento 2 Extension
+*
+* =================================================================================================================== */
+
+/* Identity - Left Menu ====================================================================== */
+
+.maxcdn-section .admin__page-nav-link:before {
+    float:left;
+    width: 40px;
+    height: 32px;
+
+    content: ' ';
+    background-image: url(../images/maxcdn_logo_32.png) !important;
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    background-size: auto 30px;
+    margin-top: -10px;
+}
+
+.maxcdn-section .admin__page-nav-link {
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.maxcdn-section .admin__page-nav-link:after {
+    float:right;
+    width: 30px;
+    height: 30px;
+    margin-top:-7px;
+    margin-right: 3px;
+
+    background-image: url(../images/logo_tig.png) !important;
+    background-size: 30px !important;
+    background-repeat:no-repeat;
+    content: ' ';
+}

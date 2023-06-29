@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="items_additional_data">
+        <observer name="add_shop_quote_item" instance="MagePal\CustomShippingRate\Observer\SetShopQuoteItem"/>
+    </event>
+</config>

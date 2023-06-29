@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <topic name="post_import_products.topic" request="Fovoso\ImportProducts\Api\RbMessageInterface" />
+    <topic name="post_import_shippings.topic" request="Fovoso\ImportProducts\Api\RbMessageInterface" />
+</config>

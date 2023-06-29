@@ -1,0 +1,66 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_Affiliate
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+?>
+<?php
+/** @var Mageplaza\Affiliate\Block\Account\Signup $block */
+?>
+<?php
+    $affiliateHelper = $block->getAffiliateHelper();
+?>
+<form class="form form-edit-account form-affiliate form-create-affiliate"
+      action="<?= /* @escapeNotVerified */ $block->getSignUpUrl() ?>" method="post" id="form-validate" autocomplete="off">
+    <fieldset class="fieldset">
+        <legend class="legend"><span><?= __('Affiliate Information') ?></span></legend>
+        <div class="field">
+            <label for="referred_by"><?= __('Referred By') ?></label>
+            <div class="input-box">
+                <?php
+                $referBy = $affiliateHelper->getCustomerReferBy();
+                $classCss = $referBy ? 'class="affiliate-input-read-only"' : '';
+                ?>
+                <input type="text" name="referred_by" <?= $classCss ?>
+                       title="<?= __('Referred By') ?>" <?= $referBy ? 'value="' . $referBy . '" readonly' : '' ?>
+                       id="referred_by" class="input-text"
+                       placeholder="<?= __('Customer email or Affiliate code') ?>"/>
+            </div>
+        </div>
+    </fieldset>
+    <?php if ($affiliateHelper->isEnableTermsAndConditions()): ?>
+        <div class="fields affiliate-clear">
+            <label for="terms_condition"><?= $affiliateHelper->getTermsAndConditionsTitle() ?></label>
+            <div class="terms_condition_textarea">
+                <div class="terms_condition_text"><?= $block->loadCmsBlock($affiliateHelper->getTermsAndConditionsHtml()) ?></div>
+                <div class="input-box">
+                    <input type="checkbox" class="required required-entry" name="terms"
+                           id="terms_conditions" <?= $affiliateHelper->isCheckedEmailNotification() ? 'checked' : '' ?>/>
+                    <label for="terms_conditions"><?= $affiliateHelper->getTermsAndConditionsCheckboxText() ?></label>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <div class="actions-toolbar affiliate-clear">
+        <div class="primary">
+            <button type="submit" class="action submit primary" title="<?= /* @escapeNotVerified */ __('Create an Account') ?>">
+                <span><?= /* @escapeNotVerified */ __('Create an Account') ?></span>
+            </button>
+        </div>
+    </div>
+</form>

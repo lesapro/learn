@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="fovoso_shipping_detail" resource="default" engine="innodb">
+        <column xsi:type="int" name="id" padding="20" unsigned="true" nullable="false" identity="true" />
+        <column xsi:type="varchar" name="sku" nullable="false" length="64" comment="SKU"/>
+        <column xsi:type="decimal" name="shipping_fee" scale="4" precision="20" nullable="true" comment="Shipping Price"/>
+        <column xsi:type="varchar" name="shipping_from" nullable="true" length="255" comment="Shipping From"/>
+        <column xsi:type="mediumtext" name="shipping_meta" nullable="true" comment="shipping meta"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

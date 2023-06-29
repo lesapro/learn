@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2019 Amasty (https://www.amasty.com)
+ * @package Amasty_GdprCookie
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_login">
+        <observer name="amasty_gdprcookie_login" instance="Amasty\GdprCookie\Observer\Customer\Login" />
+    </event>
+    <event name="core_layout_render_element">
+        <observer name="amasty_gdprcookie_layout_render" instance="Amasty\GdprCookie\Observer\ProcessLayoutRenderElement" />
+    </event>
+</config>

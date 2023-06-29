@@ -1,0 +1,146 @@
+<?php
+/**
+ * @category   Webkul
+ * @package    Webkul_GoogleShoppingFeed
+ * @author     Webkul Software Private Limited
+ * @copyright  Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license    https://store.webkul.com/license.html
+ */
+
+ $loader = $block->getViewFileUrl("Webkul_GoogleShoppingFeed::images/loader.gif");
+?>
+<script>
+     require([
+                'jquery',
+                'mage/mage',
+                'knockout'
+            ], function ($){
+                    var src= '<?= /* @noEscape */ $loader ?>';
+                    var loader=$('<img />',{'src':src,'class':'loader','style':'margin-left:5px;'});
+                    $('#edit_form').on('change','.mage_category',function(){
+                        var cat_id=$(this).val();
+                        if(cat_id==""){
+                            alert("<?= /* @noEscape */ __('please select category')?>");
+                            return false;
+                        }
+                        var subcat = $(this);
+                        subcat.after(loader.clone());
+                        subcat.nextAll('.mage_category').remove();
+                        if ($('.mage_category').length>1) {
+                            subcat.attr('style','margin-top: 10px;min-width:300px;');
+                           }
+
+                        $.ajax({
+                            url: "<?= /* @noEscape */ $block->getUrl('*/*/getchild')?>",
+                            data: {form_key: window.FORM_KEY,cat_id:cat_id},
+                            type: 'POST',
+                            dataType:'JSON',
+                            success: function(magecat){
+                                if(magecat.totalRecords){
+                                    var select = $('<select/>',{
+                                            'class':'required-entry mage_category _required select'
+                                                    +' admin__control-select',
+                                            'style':'margin-top: 10px;min-width:300px;',
+                                            'id':'mage_category_'+$('.mage_category').length
+                                          }).append($('<option />')
+                                              .val('')
+                                              .text("<?= /* @noEscape */ __('Select Sub Category')?>")
+                                          );
+                                    $(magecat.items).each(function(i, cat){
+                                        select.append($('<option />').val(cat.value).text(cat.lable));
+                                    });
+                                    $('.mage_category:last').next().after(select);
+                                }
+                                subcat.attr('style',subcat.attr('style')+'border-color:green;')
+                                          .attr('name','store_category_id');
+
+                                subcat.next('img').remove();
+                            },
+                            error: function(error){
+                                $('<div />').html(error)
+                                    .modal({
+                                        title: $.mage.__('Attention'),
+                                        autoOpen: true,
+                                        buttons: [{
+                                         text: 'OK',
+                                            attr: {
+                                                'data-action': 'cancel'
+                                            },
+                                            'class': 'action-primary',
+                                            click: function() {
+                                                    this.closeModal();
+                                                }
+                                        }]
+                                    });
+                            }
+                        })/*.done(function(){
+                            new Validation($('#edit_form'));
+                        })*/;
+                    });
+
+                    $('#edit_form').on('change', '.google_feed_category', function(){
+                        var cat_id = $(this).val();
+                        var subcat = $(this);
+                        subcat.after(loader);
+                        subcat.nextAll('.google_feed_category').remove();
+                        if ($('.google_feed_category').length > 1) {
+                            subcat.attr('style','margin-top: 10px;min-width:250px;')
+                        }
+
+                        $.ajax({
+                            url: "<?= /* @noEscape */ $block->getUrl('*/*/googlefeedchildcategory')?>",
+                            data: {form_key: window.FORM_KEY,cat_id:cat_id, level: subcat.attr('data-level')},
+                            type: 'POST',
+                            dataType:'JSON',
+                            success: function(ebayStoreCat){
+                                if (ebayStoreCat.totalRecords) {
+                                    var classStr = 'required-entry google_feed_category _required select'
+                                                    +' admin__control-select';
+                                    var select = $('<select/>',{
+                                                        'class':classStr,
+                                                        'style':'margin-top:10px; min-width: 250px;',
+                                                        'id':'google_feed_category_'+$('.google_feed_category').length,
+                                                        'data-level':ebayStoreCat.level
+                                                    }).append($('<option />')
+                                                        .val('')
+                                                        .text("<?= /* @noEscape */ __('Select Sub Category')?>")
+                                                    );
+                                    $(ebayStoreCat.items).each(function(i,cat){
+                                        select.append($('<option />').val(cat.value).text(cat.lable));
+                                    });
+                                    select.attr('name','google_feed_category[]');
+                                    $('.google_feed_category:last').next().after(select);
+                                } else {
+                                    subcat.attr('style', subcat.attr('style')+'border-color:green;')
+                                          .attr('name','google_feed_category[]');
+                                }
+                                var finalcat = '';
+                                $('.google_feed_category').each(function() {
+                                    finalcat = finalcat+' > '+$(this).val();
+                                });
+                                finalcat = finalcat != '' ? finalcat.substring(3, finalcat.length): finalcat;
+                                $('#feeds_fields_google_feed_category').val(finalcat);
+                                subcat.next('img').remove();
+                            },
+                            error:function(error){
+                                $('<div />').html(error)
+                                    .modal({
+                                        title: $.mage.__('Attention'),
+                                        autoOpen: true,
+                                        buttons: [{
+                                         text: 'OK',
+                                            attr: {
+                                                'data-action': 'cancel'
+                                            },
+                                            'class': 'action-primary',
+                                            click: function() {
+                                                    this.closeModal();
+                                                }
+                                        }]
+                                    });
+                                subcat.next('img').remove();
+                            }
+                        });
+                    });
+                });
+</script>

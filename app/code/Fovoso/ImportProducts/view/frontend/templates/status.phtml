@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @var \Fovoso\ImportProducts\Block\Display $block
+ */
+
+$numberProductMissing = $block->getNumberProductMissing();
+?>
+<div class="number-product">
+    <p><?= __('Number Product Error: ').$numberProductMissing; ?></p>
+</div>
+<div class="product-error">
+    <?php print "<pre>";print_r($block->listSKUProductError());print "</pre>"; ?>
+</div>

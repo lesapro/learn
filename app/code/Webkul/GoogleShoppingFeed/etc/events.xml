@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Webkul
+ * @package    Webkul_GoogleShoppingFeed
+ * @author     Webkul Software Private Limited
+ * @copyright  Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license    https://store.webkul.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_product_delete_after_done">
+        <observer name="webkul_googleshoppingfeed_catalog_product_delete_after" instance="Webkul\GoogleShoppingFeed\Observer\CatalogProductDeleteAfter" />
+    </event>
+    <event name="catalog_product_save_after">
+        <observer name="webkul_googleshoppingfeed_catalog_product_save_after" instance="Webkul\GoogleShoppingFeed\Observer\CatalogProductSaveAfter" />
+    </event>
+</config>

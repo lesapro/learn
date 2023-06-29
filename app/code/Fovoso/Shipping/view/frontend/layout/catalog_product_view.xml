@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- <referenceContainer name="content">
+            <referenceContainer name="product.info.main">
+                <referenceBlock name="product.info">
+                    <referenceBlock name="product.info.form.options">
+                        <block class="Fovoso\Shipping\Block\ShippingList" after="-" name="product.info.shipping.list" template="Fovoso_Shipping::shipping_list.phtml"/>
+
+                    </referenceBlock>
+                </referenceBlock>
+            </referenceContainer>
+        </referenceContainer> -->
+        <referenceContainer name="product.info.main">
+            <block class="Fovoso\Shipping\Block\ShippingList" after="product.info" name="product.info.shipping.list" template="Fovoso_Shipping::shipping_list.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

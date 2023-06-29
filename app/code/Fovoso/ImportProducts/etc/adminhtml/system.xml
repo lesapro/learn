@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="fovoso" translate="label" sortOrder="10">
+            <label>Fovoso Configuration</label>
+        </tab>
+        <section id="import_product" translate="label" sortOrder="130" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Import Products</label>
+            <tab>fovoso</tab>
+            <resource>Fovoso_ImportProducts::import_product_config</resource>
+            <group id="comment" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Product Comment</label>
+                <field id="replace_comment" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Replace all comment when update product</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

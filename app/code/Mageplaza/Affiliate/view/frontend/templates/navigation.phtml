@@ -1,0 +1,35 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_Affiliate
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+/** @var $block \Magento\Framework\View\Element\Html\Links */
+?>
+<?php /** @var $block \Magento\Customer\Block\Account\Navigation */ ?>
+<div class="block affiliate-nav">
+    <div class="title">
+        <strong><?= /* @escapeNotVerified */ __('My Affiliate'); ?></strong>
+    </div>
+    <div class="content">
+        <nav class="affiliate-nav">
+            <ul class="nav items">
+                <?= $block->renderNavigationLink(); ?>
+            </ul>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+{
+    "isobar_customer_backup": {
+        "column": {
+            "entity_id": true,
+            "firstname": true,
+            "lastname": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "isobar_customer_address_backup": {
+        "column": {
+            "entity_id": true,
+            "firstname": true,
+            "lastname": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "customer_entity": {
+        "column": {
+            "lastname": true
+        }
+    },
+    "customer_address_entity": {
+        "column": {
+            "lastname": true
+        }
+    }
+}

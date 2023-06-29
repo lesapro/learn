@@ -1,0 +1,13 @@
+{
+    "fovoso_shipping_detail": {
+        "column": {
+            "id": true,
+            "sku": true,
+            "shipping_fee": true,
+            "shipping_meta": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
