@@ -7428,78 +7428,6 @@ img.sparsh-mfp-img {
   .block-returns-tracking .block-title .action.track {
     float: right;
   }
-  .order-links .item {
-    float: left;
-    margin: 0 -1px 0 0;
-  }
-  .order-links .item a {
-    padding: 1px 35px;
-  }
-  .order-links .item strong {
-    border-bottom: 0;
-    margin-bottom: -1px;
-    padding: 1px 35px 2px 35px;
-  }
-  .order-actions-toolbar .action.print {
-    display: block;
-    float: right;
-  }
-  .account .column.main .block.block-order-details-view .block-content:not(.widget) .box,
-  [class^="sales-guest-"] .column.main .block.block-order-details-view .block-content:not(.widget) .box,
-  .sales-guest-view .column.main .block.block-order-details-view .block-content:not(.widget) .box {
-    clear: none;
-    float: left;
-    width: 25%;
-  }
-  .block-order-details-comments {
-    margin: 0 0 60px;
-  }
-  .block-order-details-comments .comment-date {
-    clear: left;
-    float: left;
-    margin-right: 50px;
-    max-width: 90px;
-  }
-  .block-order-details-comments .comment-content {
-    overflow: hidden;
-  }
-  .order-details-items {
-    margin-top: -1px;
-    padding: 25px;
-  }
-  .order-details-items .col.name {
-    padding-left: 0;
-  }
-  .order-details-items .col.price {
-    text-align: center;
-  }
-  .order-details-items .col.subtotal {
-    text-align: right;
-  }
-  .order-details-items tbody td {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .order-details-items tfoot .amount,
-  .order-details-items tfoot .mark {
-    text-align: right;
-  }
-  .table-order-items tbody .col.label,
-  .table-order-items tbody .col.value {
-    padding-left: 0;
-  }
-  .table-order-items.invoice .col.qty,
-  .table-order-items.shipment .col.qty {
-    text-align: center;
-  }
-  .table-order-items.creditmemo .col.qty,
-  .table-order-items.creditmemo .col.discount,
-  .table-order-items.creditmemo .col.subtotal {
-    text-align: center;
-  }
-  .table-order-items.creditmemo .col.total {
-    text-align: right;
-  }
   .form.send.friend .fieldset .field.text {
     width: 100%;
   }
@@ -7685,6 +7613,78 @@ img.sparsh-mfp-img {
   }
   .products.wrapper.list .product-reviews-summary {
     margin: 0;
+  }
+  .order-links .item {
+    float: left;
+    margin: 0 -1px 0 0;
+  }
+  .order-links .item a {
+    padding: 1px 35px;
+  }
+  .order-links .item strong {
+    border-bottom: 0;
+    margin-bottom: -1px;
+    padding: 1px 35px 2px 35px;
+  }
+  .order-actions-toolbar .action.print {
+    display: block;
+    float: right;
+  }
+  .account .column.main .block.block-order-details-view .block-content:not(.widget) .box,
+  [class^="sales-guest-"] .column.main .block.block-order-details-view .block-content:not(.widget) .box,
+  .sales-guest-view .column.main .block.block-order-details-view .block-content:not(.widget) .box {
+    clear: none;
+    float: left;
+    width: 25%;
+  }
+  .block-order-details-comments {
+    margin: 0 0 60px;
+  }
+  .block-order-details-comments .comment-date {
+    clear: left;
+    float: left;
+    margin-right: 50px;
+    max-width: 90px;
+  }
+  .block-order-details-comments .comment-content {
+    overflow: hidden;
+  }
+  .order-details-items {
+    margin-top: -1px;
+    padding: 25px;
+  }
+  .order-details-items .col.name {
+    padding-left: 0;
+  }
+  .order-details-items .col.price {
+    text-align: center;
+  }
+  .order-details-items .col.subtotal {
+    text-align: right;
+  }
+  .order-details-items tbody td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .order-details-items tfoot .amount,
+  .order-details-items tfoot .mark {
+    text-align: right;
+  }
+  .table-order-items tbody .col.label,
+  .table-order-items tbody .col.value {
+    padding-left: 0;
+  }
+  .table-order-items.invoice .col.qty,
+  .table-order-items.shipment .col.qty {
+    text-align: center;
+  }
+  .table-order-items.creditmemo .col.qty,
+  .table-order-items.creditmemo .col.discount,
+  .table-order-items.creditmemo .col.subtotal {
+    text-align: center;
+  }
+  .table-order-items.creditmemo .col.total {
+    text-align: right;
   }
   .block.widget .products-grid .product-item {
     width: 33.33333333%;
