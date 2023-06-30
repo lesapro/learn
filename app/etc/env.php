@@ -4,7 +4,14 @@ return [
         'frontName' => 'lesapro'
     ],
     'queue' => [
-        'consumers_wait_for_messages' => 1
+        'consumers_wait_for_messages' => 1,
+        'amqp' => [
+            'host' => '45.117.79.15',
+            'port' => '5672',
+            'user' => 'admin',
+            'password' => 'StrongPassword',
+            'virtualhost' => '/'
+        ]
     ],
     'crypt' => [
         'key' => 'b761c42fc741ea911fb76f95c56d88bb'
@@ -14,8 +21,8 @@ return [
         'connection' => [
             'default' => [
                 'host' => 'localhost',
-                'dbname' => 'fovosa',
-                'username' => 'dev',
+                'dbname' => 'devfovosa',
+                'username' => 'root',
                 'password' => 'Dequa@123!',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
@@ -34,59 +41,10 @@ return [
     ],
     'x-frame-options' => 'SAMEORIGIN',
     'MAGE_MODE' => 'developer',
-    'session' => [
-        'save' => 'redis',
-        'redis' => [
-            'host' => '169.254.228.229',
-            'port' => '6379',
-            'password' => '',
-            'timeout' => '2.5',
-            'persistent_identifier' => '',
-            'database' => '52',
-            'compression_threshold' => '2048',
-            'compression_library' => 'gzip',
-            'log_level' => '4',
-            'max_concurrency' => '32',
-            'break_after_frontend' => '5',
-            'break_after_adminhtml' => '30',
-            'first_lifetime' => '600',
-            'bot_first_lifetime' => '60',
-            'bot_lifetime' => '7200',
-            'disable_locking' => '0',
-            'min_lifetime' => '60',
-            'max_lifetime' => '2592000'
-        ]
-    ],
-    'cache' => [
-        'frontend' => [
-            'default' => [
-                'id_prefix' => 'f12_',
-                'backend' => 'Magento\\Framework\\Cache\\Backend\\Redis',
-                'backend_options' => [
-                    'server' => '169.254.228.229',
-                    'database' => '53',
-                    'port' => '6379',
-                    'password' => '',
-                    'compress_data' => '1',
-                    'compression_lib' => '',
-                    'preload_keys' => [
-                        '061_EAV_ENTITY_TYPES',
-                        '061_GLOBAL_PLUGIN_LIST',
-                        '061_DB_IS_UP_TO_DATE',
-                        '061_SYSTEM_DEFAULT'
-                    ]
-                ]
-            ],
-            'page_cache' => [
-                'id_prefix' => 'f12_'
-            ]
-        ],
-        'allow_parallel_generation' => false
-    ],
     'lock' => [
         'provider' => 'db',
         'config' => [
-            'prefix' => null
+            'prefix' => ''
         ]
     ],
     'directories' => [
@@ -104,7 +62,7 @@ return [
         'customer_notification' => 1,
         'config_integration' => 1,
         'config_integration_api' => 1,
-        'full_page' => 0,
+        'full_page' => 1,
         'config_webservice' => 1,
         'translate' => 1,
         'vertex' => 1,
@@ -112,5 +70,8 @@ return [
     ],
     'install' => [
         'date' => 'Mon, 11 Jul 2022 23:40:28 +0000'
+    ],
+    'remote_storage' => [
+        'driver' => 'file'
     ]
 ];
