@@ -21,8 +21,8 @@ return [
         'connection' => [
             'default' => [
                 'host' => 'localhost',
-                'dbname' => 'devfovosa',
-                'username' => 'root',
+                'dbname' => 'fovosa',
+                'username' => 'dev',
                 'password' => 'Dequa@123!',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
