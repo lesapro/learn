@@ -1,1 +1,0 @@
-/home/fovosa.com/public_html/app/design/frontend/Smartwave/porto/Magento_Theme/web/js/theme.js

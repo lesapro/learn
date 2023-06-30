@@ -1,1 +1,0 @@
-/home/fovosa.com/public_html/app/design/frontend/Smartwave/porto_child/Smartwave_Megamenu/web/js/sw_megamenu.js

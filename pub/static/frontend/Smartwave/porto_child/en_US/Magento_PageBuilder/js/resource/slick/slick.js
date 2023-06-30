@@ -1,1 +1,0 @@
-/home/fovosa.com/public_html/vendor/magento/module-page-builder/view/base/web/js/resource/slick/slick.js

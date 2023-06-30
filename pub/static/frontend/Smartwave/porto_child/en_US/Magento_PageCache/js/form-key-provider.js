@@ -1,1 +1,0 @@
-/home/fovosa.com/public_html/vendor/magento/module-page-cache/view/frontend/web/js/form-key-provider.js
